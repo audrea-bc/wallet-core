@@ -12,7 +12,7 @@ let package = Package(
  .package(
       name: "SwiftProtobuf",
       url: "https://github.com/apple/swift-protobuf.git",
-      "1.19.0"
+    .exact("1.19.0")
     )],
     targets: [
         .binaryTarget(
