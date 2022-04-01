@@ -6,9 +6,11 @@ let package = Package(
     platforms: [.iOS(.v13)],
     products: [
         .library(name: "WalletCore", targets: ["WalletCore"]),
-        // .library(name: "SwiftProtobuf", targets: ["SwiftProtobuf"])
+        .library(name: "SwiftProtobuf", targets: ["SwiftProtobuf"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(name: "SwiftProtobuf", url: "https://github.com/apple/swift-protobuf.git", from: "1.6.0")
+    ],
     targets: [
         .binaryTarget(
             name: "WalletCore",
